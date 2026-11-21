@@ -1,6 +1,8 @@
 # dsh-auto-model-fallback
 
-DSH（Cordis）插件：当模型请求因**额度耗尽**（`QUOTA` / `ACCOUNT_QUOTA`）失败时，自动切换到备用 provider 并重试当前步骤，让 Agent 任务不中断。
+**自动模型切换 / Auto Model Switch**
+
+DSH（Cordis）插件：当模型请求因**额度耗尽**（`QUOTA` / `ACCOUNT_QUOTA`）失败时，自动切换到备用角色（provider）并重试当前步骤，让 Agent 任务不中断。
 
 包名：`@lis212-cloud/dsh-auto-model-fallback`
 
@@ -67,7 +69,7 @@ dsh plugin --profile desktop add F:\0000\auto-model-fallback
 
 | 配置项 | 说明 |
 |---|---|
-| `fallbackModels` | 备用 provider+model 优先级列表；留空则自动发现 |
+| `fallbackModels` | 备用模型（provider + model）优先级列表；留空则自动发现 |
 | `quotaCodes` | 触发切换的错误码集合 |
 | `notify` | 切换后是否注入 developer 消息，默认 `true` |
 | `maxAttempts` | 单步骤最大切换次数，默认 `3` |
@@ -77,7 +79,7 @@ dsh plugin --profile desktop add F:\0000\auto-model-fallback
 ```
 index.js          插件全部逻辑
 cordis.patch.yml  注册与默认配置
-locale/           中英文标题与说明
+locale/           中英文标题与说明（zh: 自动模型切换 / en: Auto Model Switch）
 icon.svg          设置页图标
 LICENSE           MIT
 ```
