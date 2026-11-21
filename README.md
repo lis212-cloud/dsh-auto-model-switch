@@ -1,4 +1,4 @@
-# dsh-auto-model-fallback
+# dsh-auto-model-switch
 
 **自动模型切换 / Auto Model Switch**
 
