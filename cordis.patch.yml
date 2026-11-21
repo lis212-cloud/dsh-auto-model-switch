@@ -1,6 +1,6 @@
 - insert:
     - id: auto-model-fallback
-      name: '@local/auto-model-fallback'
+      name: '@lis212-cloud/dsh-auto-model-fallback'
       config:
         fallbackModels: []
         quotaCodes:

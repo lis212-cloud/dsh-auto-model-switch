@@ -1,7 +1,12 @@
 {
-  "name": "@local/auto-model-fallback",
-  "version": "1.0.0",
+  "name": "@lis212-cloud/dsh-auto-model-fallback",
+  "version": "1.0.1",
   "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lis212-cloud/dsh-auto-model-fallback.git"
+  },
   "type": "module",
   "exports": {
     ".": "./index.js",

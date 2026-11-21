@@ -2,6 +2,8 @@
 
 DSH（Cordis）插件：当模型请求因**额度耗尽**（`QUOTA` / `ACCOUNT_QUOTA`）失败时，自动切换到备用 provider 并重试当前步骤，让 Agent 任务不中断。
 
+包名：`@lis212-cloud/dsh-auto-model-fallback`
+
 ## 能力边界（先看这个）
 
 - ✅ 只处理 `failure.code` 为 `QUOTA`、`ACCOUNT_QUOTA` 的失败（大小写不敏感）。
@@ -28,8 +30,16 @@ DSH（Cordis）插件：当模型请求因**额度耗尽**（`QUOTA` / `ACCOUNT_
 
 ## 安装
 
+从仓库安装：
+
 ```powershell
-dsh plugin --profile desktop add <本仓库本地路径或 git 地址>
+dsh plugin --profile desktop add github:lis212-cloud/dsh-auto-model-fallback
+```
+
+或使用本地目录：
+
+```powershell
+dsh plugin --profile desktop add F:\0000\auto-model-fallback
 ```
 
 安装后完全退出 DSH 再重新启动。若遇到 `unable to verify the first certificate`，先设置 `NODE_OPTIONS=--use-system-ca`（需 Node ≥ 22.15）。
@@ -41,7 +51,7 @@ dsh plugin --profile desktop add <本仓库本地路径或 git 地址>
 ```yaml
 - insert:
     - id: auto-model-fallback
-      name: '@local/auto-model-fallback'
+      name: '@lis212-cloud/dsh-auto-model-fallback'
       config:
         fallbackModels:
           - provider: deepseek
@@ -69,8 +79,9 @@ index.js          插件全部逻辑
 cordis.patch.yml  注册与默认配置
 locale/           中英文标题与说明
 icon.svg          设置页图标
+LICENSE           MIT
 ```
 
 ## License
 
-未指定。
+[MIT](./LICENSE) © 2026 lis212-cloud
