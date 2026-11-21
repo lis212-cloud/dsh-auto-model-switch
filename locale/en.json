@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Auto Model Fallback",
+    "description": "Automatically switches to an available model when the current model runs out of quota. Detects QUOTA and ACCOUNT_QUOTA errors, picks a fallback provider, and retries the request."
+  }
+}

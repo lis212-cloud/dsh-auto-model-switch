@@ -1,0 +1,9 @@
+- insert:
+    - id: auto-model-fallback
+      name: '@local/auto-model-fallback'
+      config:
+        fallbackModels: []
+        quotaCodes:
+          - QUOTA
+          - ACCOUNT_QUOTA
+        notify: true
