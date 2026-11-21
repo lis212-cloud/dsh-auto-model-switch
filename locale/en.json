@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Auto Model Fallback",
-    "description": "Automatically switches to an available model when the current model runs out of quota. Detects QUOTA and ACCOUNT_QUOTA errors, picks a fallback provider, and retries the request."
+    "title": "Auto Model Switch",
+    "description": "Automatically switches the active model to a backup provider when the current model runs out of quota (QUOTA or ACCOUNT_QUOTA), then retries the pending request so the agent task keeps running."
   }
 }
